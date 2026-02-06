@@ -33,16 +33,6 @@ public class Lista {
         size++;
     }
 
-    public Tecnica rimuoviTesta() {
-        if (isVuota()) {
-            return null;
-        }
-        Nodo nodoDaRimuovere = head;
-        head = head.getNext();
-        size--;
-        return nodoDaRimuovere.getTecnica();
-    }
-
     public void eliminazione(int index) {
         if (isVuota() || index < 0 || index >= size) {
             return;
