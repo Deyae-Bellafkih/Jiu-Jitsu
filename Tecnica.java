@@ -1,4 +1,4 @@
-public class Tecnica {
+public class Tecnica implements Comparable<Tecnica> {
 
      public enum Categoria {
         GUARDIA,
@@ -27,6 +27,16 @@ public class Tecnica {
 
     public int getDifficolta() {
         return difficolta;
+    }
+
+    public int compareTo(Tecnica t) {
+        if (this.difficolta < t.difficolta) {
+            return -1;
+        } else if (this.difficolta == t.difficolta) {
+            return 0;
+        } else {
+            return 1;
+        }
     }
 
     public String toString() {
