@@ -8,6 +8,10 @@ public class Lista {
         size = 0;
     }
 
+    public Iteratore iterator() {
+        return new Iteratore(head);
+    }
+
     public boolean isVuota() {
         return head == null;
     }
